@@ -17,12 +17,12 @@ export const cubicProgress = value => {
 	value = value < 0 ? 0 : value > 1 ? 1 : value;
 	value /= 1 / 2;
 	if (value < 1) {
-		return 1 / 2 * value * value * value;
+		return (1 / 2) * value * value * value;
 	}
 
 	value -= 2;
 
-	return 1 / 2 * (value * value * value + 2);
+	return (1 / 2) * (value * value * value + 2);
 };
 
 export const debounce = (func, wait, immediate) => {
